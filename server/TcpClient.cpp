@@ -27,7 +27,8 @@ int main(int argc, char* argv[]){
 
     serveraddr.sin_family = AF_INET;
     serveraddr.sin_port = PORT;
-    serveraddr.sin_addr.s_addr = inet_addr("127.0.0.1");
+    serveraddr.sin_addr.s_addr = inet_addr("10.224.34.132");
+    // serveraddr.sin_addr.s_addr = inet_addr("127.0.0.1");
     bzero(&(serveraddr.sin_zero), 8);
     
     ret = connect(socketfd, (struct sockaddr *)&serveraddr, sizeof(struct sockaddr));
